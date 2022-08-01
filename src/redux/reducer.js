@@ -22,10 +22,8 @@ const initialState = {
 export function postsReducer(state = initialState, actions) {
   console.log('reducer');
   switch (actions.type) {
-    case 'posts':
-      return { posts: state.posts };
     case 'userdata':
-      return { users: actions.payload };
+      return { ...state, users: actions.payload };
     default:
       return state;
   }
