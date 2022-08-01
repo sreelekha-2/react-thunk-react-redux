@@ -7,6 +7,7 @@ export default function Posts() {
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
   console.log(posts);
+  console.log(users);
   return (
     <>
       <h1>Post Component</h1>
