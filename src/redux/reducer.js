@@ -16,6 +16,7 @@ const initialState = {
       desc: 'Post description 3',
     },
   ],
+  users: [],
 };
 
 export function postsReducer(state = initialState, actions) {
@@ -23,6 +24,8 @@ export function postsReducer(state = initialState, actions) {
   switch (actions.type) {
     case 'posts':
       return { posts: state.posts };
+    case 'userdata':
+      return { users: actions.payload };
     default:
       return state;
   }
